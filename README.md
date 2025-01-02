@@ -1,7 +1,6 @@
 ## Resultado de la tarea
 
-https://github.com/user-attachments/assets/063de6cc-6d56-45c2-8457-622d0d630b82
-
+https://github.com/user-attachments/assets/9c734001-dedc-4ddb-ad18-8c99d867b1fa
 
 ## Referencia dada por el profesor
 
