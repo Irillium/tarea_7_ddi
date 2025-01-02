@@ -4,7 +4,7 @@
     <dimen name="carouselHeight">500dp</dimen>
     <dimen name="lg_space">24dp</dimen>
     <dimen name="md_space">20dp</dimen>
-    <dimen name="profileSize">90dp</dimen>
+    <dimen name="profileSize">60dp</dimen>
     <dimen name="standardSpace">16dp</dimen>
     <dimen name="ratingBarSize">50dp</dimen>
     <dimen name="numOpinionsSize">15dp</dimen>

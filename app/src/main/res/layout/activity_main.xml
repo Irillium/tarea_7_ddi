@@ -103,7 +103,7 @@
                 android:scaleX="0.4"
                 android:scaleY="0.4"
                 app:layout_constraintBottom_toBottomOf="@+id/dividerUser"
-                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintHorizontal_bias="0.15"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/separationCarousel"
@@ -115,11 +115,11 @@
                 android:text="@string/numOpinions"
                 android:textSize="@dimen/numOpinionsSize"
                 app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
-                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintHorizontal_bias="0.54"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nameUser"
-                app:layout_constraintVertical_bias="0.26" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/buttonOutlinedSquad"
@@ -139,7 +139,9 @@
                 android:text="@string/tagProfile"
                 app:icon="@drawable/percha"
                 app:layout_constraintLeft_toLeftOf="@+id/nameUser"
-                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+                app:layout_constraintTop_toBottomOf="@+id/nameUser"
+                app:layout_constraintVertical_bias="0.55"
+                app:layout_constraintBottom_toBottomOf="@+id/dividerUser"/>
 
             <LinearLayout
                 android:id="@+id/marginUser"
