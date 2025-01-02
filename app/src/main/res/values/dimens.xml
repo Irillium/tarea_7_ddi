@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nestedHeight">689dp</dimen>
+    <dimen name="carouselHeight">500dp</dimen>
+    <dimen name="lg_space">24dp</dimen>
+    <dimen name="md_space">20dp</dimen>
+    <dimen name="profileSize">90dp</dimen>
+    <dimen name="standardSpace">16dp</dimen>
+    <dimen name="ratingBarSize">50dp</dimen>
+    <dimen name="numOpinionsSize">15dp</dimen>
+    <dimen name="xl_size">30dp</dimen>
+    <dimen name="none">0dp</dimen>
+    <dimen name="adTitleWidth">300dp</dimen>
+    <dimen name="titleSize">18dp</dimen>
+    <dimen name="brandHeight">28dp</dimen>
+    <dimen name="underlineWidthBrand">75dp</dimen>
+    <dimen name="underlineStandarHeight">1dp</dimen>
+    <dimen name="sp_padding">5dp</dimen>
+    <dimen name="md_padding">7dp</dimen>
+    <dimen name="extra_space">25dp</dimen>
+    <dimen name="descriptionTextWidth">310dp</dimen>
+    <dimen name="widthIconHanger">44dp</dimen>
+    <dimen name="textTagClosetWidth">250dp</dimen>
+    <dimen name="widthProtectText01">55dp</dimen>
+    <dimen name="widthProtectText02">157dp</dimen>
+    <dimen name="widthProtectText03">155dp</dimen>
+    <dimen name="widthProtectText04">250dp</dimen>
+    <dimen name="widthProtectText05">165dp</dimen>
+    <dimen name="widthProtectText06">65dp</dimen>
+    <dimen name="widthProtectText07">65dp</dimen>
+    <dimen name="heightSpaceButtonsDown">100dp</dimen>
+    <dimen name="buttonBottom">160dp</dimen>
+
+</resources>

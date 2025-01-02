@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomMaterialButton" parent="Widget.Material3.Button">
+        <item name="paddingStart">0dp</item>
+        <item name="paddingEnd">0dp</item>
+        <item name="iconPadding">4dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="iconSize">22dp</item>
+    </style>
+    <style name="buttonOutlinedSquad" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerSize">30dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+    <style name="buttonNormalSquad" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="cornerSize">30dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+    <style name="roundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="MenuItemTitleRed" parent="TextAppearance.AppCompat.Menu">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+</resources>

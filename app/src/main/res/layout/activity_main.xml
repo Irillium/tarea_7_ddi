@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nestedHeight"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtons">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/bottomButtons">
+
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/carousel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/carouselHeight"
+                app:showNavigationButtons="false"
+                app:showTopShadow="false">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:menu="@menu/top_app_bar"
+                    app:navigationIcon="@drawable/atras" />
+            </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/CustomMaterialButton"
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/whiteTransparent"
+                android:text="@string/number_like"
+                app:icon="@drawable/like_check"
+                app:layout_constraintBottom_toBottomOf="@+id/carousel"
+                app:layout_constraintRight_toRightOf="@+id/carousel" />
+            <com.google.android.material.button.MaterialButton
+                style="@style/CustomMaterialButton"
+                android:id="@+id/likeCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/whiteTransparent"
+                android:text="@string/number_like_check"
+                app:icon="@drawable/like"
+                app:iconTint="@color/red"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/carousel"
+                app:layout_constraintRight_toRightOf="@+id/carousel" />
+
+            <LinearLayout
+                android:id="@+id/separationCarousel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lg_space"
+                app:layout_constraintTop_toBottomOf="@+id/carousel" />
+
+            <ImageView
+                android:id="@+id/user"
+                style="@style/roundedImageView"
+                android:layout_width="@dimen/profileSize"
+                android:layout_height="@dimen/profileSize"
+                android:scaleType="centerCrop"
+                android:src="@drawable/foto_perfil_random"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separationCarousel" />
+
+            <TextView
+                android:id="@+id/nameUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nameProfile"
+                android:textSize="@dimen/standardSpace"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toRightOf="@+id/user"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/user" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ratingBarSize"
+                android:numStars="5"
+                android:rating="5"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                app:layout_constraintBottom_toBottomOf="@+id/dividerUser"
+                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separationCarousel"
+                app:layout_constraintVertical_bias="0.2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/numOpinions"
+                android:textSize="@dimen/numOpinionsSize"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameUser"
+                app:layout_constraintVertical_bias="0.26" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonOutlinedSquad"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/buttonSend"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separationCarousel" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/xl_size"
+                android:padding="@dimen/none"
+                android:text="@string/tagProfile"
+                app:icon="@drawable/percha"
+                app:layout_constraintLeft_toLeftOf="@+id/nameUser"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+            <LinearLayout
+                android:id="@+id/marginUser"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/md_space"
+                app:layout_constraintTop_toBottomOf="@+id/ticket" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/marginUser" />
+
+            <LinearLayout
+                android:id="@+id/marginUpAd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/md_space"
+                app:layout_constraintTop_toBottomOf="@+id/dividerUser" />
+
+            <TextView
+                android:id="@+id/adTitle"
+                android:layout_width="@dimen/adTitleWidth"
+                android:layout_height="wrap_content"
+                android:text="@string/zapatillas_title"
+                android:textSize="@dimen/titleSize"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/marginUpAd" />
+
+            <TextView
+                android:id="@+id/data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subtagsAd"
+                android:textSize="@dimen/standardSpace"
+                app:layout_constraintHorizontal_bias="0.12"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adTitle" />
+
+            <TextView
+                android:id="@+id/brand"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/brandHeight"
+                android:text="@string/marca_zapatillas"
+                android:textColor="@color/md_theme_primaryContainer"
+                android:textSize="@dimen/standardSpace"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintLeft_toRightOf="@+id/data"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/data" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="@dimen/underlineWidthBrand"
+                android:layout_height="@dimen/underlineStandarHeight"
+                app:dividerColor="@color/md_theme_primaryContainer"
+                app:layout_constraintLeft_toLeftOf="@id/brand"
+                app:layout_constraintTop_toBottomOf="@+id/data" />
+
+            <LinearLayout
+                android:id="@+id/marginData"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/md_space"
+                app:layout_constraintTop_toBottomOf="@+id/data" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/priceSneakers"
+                app:layout_constraintLeft_toLeftOf="@+id/data"
+                app:layout_constraintTop_toBottomOf="@+id/marginData" />
+
+            <TextView
+                android:id="@+id/protectPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/protection_text"
+                android:textColor="@color/md_theme_primaryContainer"
+                android:textSize="@dimen/standardSpace"
+                app:layout_constraintLeft_toLeftOf="@+id/data"
+                app:layout_constraintTop_toBottomOf="@+id/price" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/xl_size"
+                android:layout_height="@dimen/md_space"
+                android:backgroundTint="@color/transparent"
+                android:padding="@dimen/sp_padding"
+                app:icon="@drawable/outline_verified_user_24"
+                app:iconTint="@color/md_theme_primaryContainer"
+                app:layout_constraintLeft_toRightOf="@id/protectPrice"
+                app:layout_constraintTop_toTopOf="@+id/protectPrice" />
+
+            <LinearLayout
+                android:id="@+id/pricesSpace"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/md_space"
+                app:layout_constraintTop_toBottomOf="@+id/protectPrice" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerUpDescription"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xl_size"
+                app:layout_constraintTop_toBottomOf="@+id/pricesSpace" />
+
+            <LinearLayout
+                android:id="@+id/espadioUpDesciption"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xl_size"
+                app:layout_constraintTop_toBottomOf="@+id/dividerUpDescription" />
+
+            <TextView
+                android:id="@+id/DescipcionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/descriptionTitle"
+                android:textColor="@color/md_theme_outlineVariant_mediumContrast"
+                app:layout_constraintLeft_toLeftOf="@id/protectPrice"
+                app:layout_constraintTop_toBottomOf="@+id/espadioUpDesciption" />
+
+            <LinearLayout
+                android:id="@+id/espadioDesciptionText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/extra_space"
+                app:layout_constraintTop_toBottomOf="@+id/DescipcionTitle" />
+
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="@dimen/descriptionTextWidth"
+                android:layout_height="wrap_content"
+                android:text="@string/description_text"
+                android:textSize="@dimen/standardSpace"
+                app:layout_constraintLeft_toLeftOf="@id/DescipcionTitle"
+                app:layout_constraintTop_toBottomOf="@+id/espadioDesciptionText" />
+
+            <TextView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more"
+                android:textColor="@color/md_theme_primaryContainer"
+                android:textSize="@dimen/standardSpace"
+                app:layout_constraintLeft_toLeftOf="@+id/DescipcionTitle"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="@dimen/xl_size"
+                android:layout_height="@dimen/underlineStandarHeight"
+                app:dividerColor="@color/md_theme_primaryContainer"
+                app:layout_constraintBottom_toBottomOf="@+id/descriptionDown"
+                app:layout_constraintLeft_toLeftOf="@id/more"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionText"
+                app:layout_constraintVertical_bias="0.45" />
+
+            <LinearLayout
+                android:id="@+id/descriptionDown"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/md_space"
+                app:layout_constraintTop_toBottomOf="@+id/more" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerTags"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xl_size"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionDown" />
+
+            <LinearLayout
+                android:id="@+id/dividerTagsUp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/md_space"
+                app:layout_constraintTop_toBottomOf="@+id/dividerTags" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/iconHanger"
+                android:layout_width="@dimen/widthIconHanger"
+                android:layout_height="@dimen/ratingBarSize"
+                android:backgroundTint="@color/violetTransparent"
+                android:padding="@dimen/md_padding"
+                app:icon="@drawable/percha"
+                app:iconSize="@dimen/xl_size"
+                app:iconTint="@color/md_theme_primary"
+                app:layout_constraintLeft_toLeftOf="@+id/more"
+                app:layout_constraintTop_toBottomOf="@+id/dividerTagsUp" />
+
+            <TextView
+                android:id="@+id/titleTagCloset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/armario_title"
+                android:textSize="@dimen/standardSpace"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toRightOf="@+id/iconHanger"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iconHanger" />
+
+            <TextView
+                android:id="@+id/textTagCloset"
+                android:layout_width="@dimen/textTagClosetWidth"
+                android:layout_height="wrap_content"
+                android:text="@string/armario_text"
+                app:layout_constraintLeft_toLeftOf="@id/titleTagCloset"
+                app:layout_constraintTop_toBottomOf="@+id/titleTagCloset" />
+
+            <LinearLayout
+                android:id="@+id/spaceTags"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/md_space"
+                app:layout_constraintTop_toBottomOf="@+id/textTagCloset" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/iconInsurance"
+                android:layout_width="@dimen/widthIconHanger"
+                android:layout_height="@dimen/ratingBarSize"
+                android:backgroundTint="@color/violetTransparent"
+                android:padding="@dimen/md_padding"
+                app:icon="@drawable/verify"
+                app:iconSize="@dimen/xl_size"
+                app:iconTint="@color/md_theme_primary"
+                app:layout_constraintLeft_toLeftOf="@+id/more"
+                app:layout_constraintTop_toBottomOf="@+id/spaceTags" />
+
+            <TextView
+                android:id="@+id/titleTagProtect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/armario_title"
+                android:textSize="@dimen/standardSpace"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toRightOf="@+id/iconInsurance"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iconInsurance" />
+
+            <TextView
+                android:id="@+id/textProtect01"
+                android:layout_width="@dimen/widthProtectText01"
+                android:layout_height="wrap_content"
+                android:text="@string/text_protect_01"
+                app:layout_constraintLeft_toLeftOf="@id/titleTagProtect"
+                app:layout_constraintTop_toBottomOf="@+id/titleTagProtect" />
+
+            <TextView
+                android:id="@+id/textProtect02"
+                android:layout_width="@dimen/widthProtectText02"
+                android:layout_height="wrap_content"
+                android:text="@string/text_protect_02"
+                android:textColor="@color/md_theme_primaryContainer"
+                app:layout_constraintLeft_toRightOf="@id/textProtect01"
+                app:layout_constraintTop_toBottomOf="@+id/titleTagProtect" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="@dimen/widthProtectText03"
+                android:layout_height="@dimen/underlineStandarHeight"
+                app:dividerColor="@color/md_theme_primaryContainer"
+                app:layout_constraintBottom_toBottomOf="@+id/spaceTagsDown"
+                app:layout_constraintLeft_toLeftOf="@id/textProtect02"
+                app:layout_constraintTop_toBottomOf="@+id/titleTagProtect"
+                app:layout_constraintVertical_bias="0.15" />
+            <TextView
+                android:id="@+id/textProtect03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_protect_03"
+                app:layout_constraintLeft_toRightOf="@id/textProtect02"
+                app:layout_constraintTop_toBottomOf="@+id/titleTagProtect" />
+
+            <TextView
+                android:id="@+id/textProtect04"
+                android:layout_width="@dimen/widthProtectText04"
+                android:layout_height="wrap_content"
+                android:text="@string/text_protect_04"
+                app:layout_constraintLeft_toLeftOf="@id/textProtect01"
+                app:layout_constraintTop_toBottomOf="@+id/textProtect01" />
+
+            <TextView
+                android:id="@+id/textProtect05"
+                android:layout_width="@dimen/widthProtectText05"
+                android:layout_height="wrap_content"
+                android:text="@string/text_protect_05"
+                app:layout_constraintLeft_toLeftOf="@id/textProtect04"
+                app:layout_constraintTop_toBottomOf="@+id/textProtect04" />
+
+            <TextView
+                android:id="@+id/textProtect06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_protect_06"
+                android:textColor="@color/md_theme_primaryContainer"
+                app:layout_constraintLeft_toRightOf="@id/textProtect05"
+                app:layout_constraintTop_toBottomOf="@+id/textProtect04" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="@dimen/widthProtectText06"
+                android:layout_height="@dimen/underlineStandarHeight"
+                app:dividerColor="@color/md_theme_primaryContainer"
+                app:layout_constraintBottom_toBottomOf="@+id/spaceTagsDown"
+                app:layout_constraintLeft_toRightOf="@id/textProtect05"
+                app:layout_constraintTop_toBottomOf="@+id/textProtect04"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <TextView
+                android:id="@+id/textProtect07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_protect_07"
+                android:textColor="@color/md_theme_primaryContainer"
+                app:layout_constraintLeft_toLeftOf="@id/textProtect05"
+                app:layout_constraintTop_toBottomOf="@+id/textProtect05" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="@dimen/widthProtectText07"
+                android:layout_height="@dimen/underlineStandarHeight"
+                app:dividerColor="@color/md_theme_primaryContainer"
+                app:layout_constraintBottom_toBottomOf="@+id/spaceTagsDown"
+                app:layout_constraintLeft_toLeftOf="@id/textProtect07"
+                app:layout_constraintTop_toBottomOf="@+id/textProtect04"
+                app:layout_constraintVertical_bias="0.62" />
+            <LinearLayout
+                android:id="@+id/spaceTagsDown"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/md_space"
+                app:layout_constraintTop_toBottomOf="@+id/textProtect07" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerEnd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xl_size"
+                app:layout_constraintTop_toBottomOf="@+id/spaceTagsDown" />
+
+            <LinearLayout
+                android:id="@+id/spacePriceEnd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/extra_space"
+                app:layout_constraintTop_toBottomOf="@+id/dividerEnd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shipping"
+                android:textSize="@dimen/md_space"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/iconInsurance"
+                app:layout_constraintTop_toBottomOf="@id/spacePriceEnd" />
+
+            <TextView
+                android:id="@+id/textPriceShipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/priceShipping"
+                android:textSize="@dimen/md_space"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spacePriceEnd" />
+
+            <LinearLayout
+                android:id="@+id/spaceEnd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/md_space"
+                app:layout_constraintTop_toBottomOf="@+id/textPriceShipping" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/spaceEnd" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="@dimen/none"
+        android:layout_height="wrap_content"
+        android:background="@color/md_theme_background"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_app_bar"
+        app:navigationIcon="@drawable/atras"
+        app:navigationIconTint="@color/md_theme_onBackground_mediumContrast"
+        app:title="@string/title" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightSpaceButtonsDown"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/buttonOutlinedSquad"
+            android:layout_width="@dimen/buttonBottom"
+            android:layout_height="wrap_content"
+            android:text="@string/navButton01"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/buttonNormalSquad"
+            android:layout_width="@dimen/buttonBottom"
+            android:layout_height="wrap_content"
+            android:text="@string/navButton02"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

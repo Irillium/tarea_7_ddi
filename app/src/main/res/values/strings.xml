@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">DDI_Tarea_7</string>
+    <string name="title">Zapatillas El Ganso Verdes T...</string>
+    <string name="zapatillas_title">Zapatillas El Ganso Verdes Talla 43 Nuevas!!</string>
+    <string name="protection_text">68,95 € Protección al comprador incluidas</string>
+    <string name="description_text">Zapatillas casual de la marca El Ganso en color verde disponibles en la talla 43.Se</string>
+    <string name="armario_title">Distintivo Armario estrella</string>
+    <string name="armario_text">Concedido a vendedores que suben artículos con frecuencia.</string>
+    <string name="tasa_title">Distintivo Armario estrella</string>
+    <string name="tasa_text">Nuestra protección al comprador implica una tasa que se añade a las compras realizadas a través del botón "Comprar".Esta protección incluye la política de reembolso.</string>
+    <string name="denunciar">Denunciar</string>
+    <string name="compartir">Compartir</string>
+    <string name="marca_zapatillas">EL GANSO</string>
+    <string name="protect_title">Tasa de protección al comprador </string>
+    <string name="text_protect_01">Nuestra</string>
+    <string name="text_protect_02">protección al comprador</string>
+    <string name="text_protect_03">implica</string>
+    <string name="text_protect_04">una tasa que se añade a las comras realizadas a través del botón "Comprar".</string>
+    <string name="text_protect_05">Esta protección incluye la</string>
+    <string name="text_protect_06">politica de</string>
+    <string name="text_protect_07">reembolso.</string>
+    <string name="number_like">18</string>
+    <string name="number_like_check">19</string>
+    <string name="nameProfile">pacoCuevas837</string>
+    <string name="numOpinions">(190)</string>
+    <string name="buttonSend">Enviar...</string>
+    <string name="tagProfile">Anuncios frecuentes</string>
+    <string name="subtagsAd">43 · Nuevo con etiquetas ·</string>
+    <string name="priceSneakers">65,00€</string>
+    <string name="descriptionTitle">Descripción</string>
+    <string name="more">Más</string>
+    <string name="shipping">Envio</string>
+    <string name="priceShipping">Desde 0,00 €</string>
+    <string name="navButton01">Hacer una oferta</string>
+    <string name="navButton02">Comprar</string>
+</resources>
